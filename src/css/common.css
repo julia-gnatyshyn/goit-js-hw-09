@@ -42,6 +42,7 @@ img {
 
 .btn:disabled {
   background-color: gray;
+  opacity: 50%;
 }
 
 #datetime-picker {
