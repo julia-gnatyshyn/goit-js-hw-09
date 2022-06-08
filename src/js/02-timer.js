@@ -23,6 +23,7 @@ const fpickr = flatpickr('#datetime-picker', options);
 let initDate = null;
 const currentDate = Date.now();
 const startTimerRef = document.querySelector('[data-start]');
+const input = document.querySelector('#datetime-picker');
 startTimerRef.disabled = true;
 
 class Timer {
@@ -88,6 +89,7 @@ function startTimerHandler() {
 
   const timer = new Timer({ targetDate: new Date(selectedDate) });
   startTimerRef.disabled = true;
+  input.disabled = true;
 }
 
 startTimerRef.addEventListener('click', startTimerHandler);
